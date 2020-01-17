@@ -1,0 +1,37 @@
+# ACESSAR PASTA COM BINÁRIOS NO MONGODB, NO PROMPT DO WINDOWS 
+#(O IDEAL É COLOCAR ESTA PASTA NO PATH DO SISTEMA OPERACIONAL)
+cd "C:\Program Files\MongoDB\Server\4.0\bin"
+
+
+# RESTAURAR UM EXEMPLO DE BASE DE DADOS 
+C:\Program Files\MongoDB\Server\4.0\bin> 
+C:\Program Files\MongoDB\Server\4.0\bin>mongoimport --drop -d dbcurso C:\Users\julio\Downloads\dataset.json
+2018-11-10T00:03:49.323-0300    no collection specified
+2018-11-10T00:03:49.410-0300    using filename 'dataset' as collection
+2018-11-10T00:03:50.422-0300    connected to: localhost
+2018-11-10T00:03:50.424-0300    dropping: dbcurso.dataset
+2018-11-10T00:03:52.341-0300    imported 25359 documents
+C:\Program Files\MongoDB\Server\4.0\bin>
+
+
+C:\Program Files\MongoDB\Server\4.0\bin>mongoimport --drop -d dbcurso -c restaurantes C:\Users\julio\Downloads\dataset.json
+2018-11-10T00:06:26.095-0300    connected to: localhost
+2018-11-10T00:06:26.179-0300    dropping: dbcurso.restaurantes
+2018-11-10T00:06:28.049-0300    imported 25359 documents
+C:\Program Files\MongoDB\Server\4.0\bin>
+
+
+# REALIZAR BACKUP  
+C:\Program Files\MongoDB\Server\4.0\bin>mongodump --collection restaurantes --db dbcurso --out C:\Users\julio\Downloads\backup-mongodb- curso.json
+2018-11-10T00:09:03.039-0300    writing dbcurso.restaurantes to
+2018-11-10T00:09:03.326-0300    done dumping dbcurso.restaurantes (25359 documents)
+C:\Program Files\MongoDB\Server\4.0\bin>
+
+
+
+
+
+
+
+
+
